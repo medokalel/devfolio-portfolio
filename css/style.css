@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #F5F5F5;
+}
+section{
+    scroll-margin-top: 50px;
+    padding-top: 64px;
+}
+
+    /* start header section */
+header{
+    background-image: linear-gradient(rgb( 0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)) , url(../image/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100svh;
+}
+.navbar{
+    transition: all 0.5s;
+    background-color: transparent;
+    padding: 10px;
+}
+.navbar.scrolled{
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    padding: 5px;
+}
+header .navbar .nav-item{
+    position: relative;
+    margin-left: 15px;
+}
+header .navbar .nav-item::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left:8px;
+        transition: 0.3s;
+}
+header .navbar .nav-item:hover::after{
+    width: 65%;
+}
+header .navbar .nav-item.active::after{
+    width: 65%;
+}
+header .navbar .nav-item .nav-link{
+    font-size: 14px;
+    font-weight: 500;
+}
+header .header-caption{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+header .header-caption h1{
+    font-size: 70px;
+}
+header .header-caption span{
+    font-size: 40px;
+    font-weight: 600;
+}
+#typing::after {
+    content: "|";
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+}
+    /* end header section */
+
+    /* strat main section */
+
+/* start about */
+main #about .u-l{
+    font-size: 18px;
+}
+#skill{
+    font-size: 20px;
+}
+main #about .about-info h2{
+    position: relative;
+    margin-bottom: 50px;
+}
+main #about .about-info h2::before{
+    content: '';
+    width: 100px;
+    height: 3px;
+    background-color: #0078FF;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+/* end about */
+
+/* start services */
+main #services .container .title-box{
+    margin-bottom: 64px;
+}
+main #services h2{
+    font-size: 48px;
+}
+main #services .line{
+    position: relative;
+}
+main #services .line::after{
+    content: '';
+    width: 40px;
+    height: 5px;
+    background-color: #0078FF;
+    position: absolute;
+    bottom: -16px;
+    left: 48%;
+}
+main #services .circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    border: 10px solid #0078FF;
+    border-radius: 50%;
+        transition: all 0.6s;
+}
+main #services .card:hover .circle{
+    background-color: #0078FF;
+    border-color: gainsboro;
+    color: white;
+}
+/* end services */
+
+/* start counter */
+main #counter{
+    background-image: linear-gradient(#0077ffad,#0077ffad) ,url(../image/counters-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 124px 0;
+    margin-top: 50px;
+}
+main #counter .circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    border: 10px solid gainsboro;
+    border-radius: 50%;
+}
+main #counter .counter-box p{
+    font-size: 32px;
+    margin-bottom: 0;
+}
+/* end counter */
+
+/* start portfolio */
+main #portfolio .title-box{
+    margin-bottom: 64px;
+}
+main #portfolio h2{
+    font-size: 48px;
+}
+main #portfolio .line{
+    position: relative;
+}
+main #portfolio .line::after{
+    content: '';
+    width: 40px;
+    height: 5px;
+    background-color: #0078FF;
+    position: absolute;
+    bottom: -16px;
+    left: 48%;
+}
+main #portfolio .card{
+    overflow: hidden;
+}
+main #portfolio .card img{
+    transition: all 0.8s;
+    z-index: 0;
+}
+main #portfolio .card:hover img{
+    transform: scale(1.3);
+}
+main #portfolio .card .card-body{
+    text-align: left;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    z-index: 1;
+}
+main #portfolio .card .card-body .card-info h2{
+    font-size: 19px;
+}
+main #portfolio .card .card-body .card-info .active{
+    color: #0078FF;
+}
+main #portfolio .card .card-body .card-icon span i{
+    color: #0078FF;
+    font-size: 40px;
+    cursor: pointer;
+}
+/* end portfolio */
+
+/* start Testimonial */
+main #testimonial{
+    background-image: linear-gradient(#0077ffad,#0077ffad) ,url(../image/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 124px 0;
+    margin-top: 50px;
+    position: relative;
+}
+main #testimonial .card-wrapper{
+    text-align: center;
+}
+main #testimonial .card-wrapper .card-body{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+main #testimonial .card-wrapper .card-body img{
+    width: 130px;
+}
+main #testimonial .card-wrapper .card-body .card-title{
+    font-size: 22px;
+    margin: 5px 0;
+}
+main #testimonial .card-wrapper .card-body{
+    margin-bottom: 30px;
+}
+.swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+}
+/* end Testimonial */
+
+/* start Blog */
+main #blog .title-box{
+    margin-bottom: 64px;
+}
+main #blog h2{
+    font-size: 48px;
+}
+main #blog h3{
+    font-size: 20px;
+}
+main #blog .line{
+    position: relative;
+}
+main #blog .line::after{
+    content: '';
+    width: 40px;
+    height: 5px;
+    background-color: #0078FF;
+    position: absolute;
+    bottom: -16px;
+    left: 48%;
+}
+main #blog .card{
+    border: 1px solid #bebebe;
+}
+main #blog .card .card-category{
+    position: relative;
+    margin-bottom: 10px;
+}
+main #blog .card .card-category span{
+    background-color: #0078FF;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 6px 15px;
+    border-radius: 4px;
+    color: white;
+    position: absolute;
+    top: -15px;
+    left: 40%;
+}
+main #blog .card .card-body{
+    padding: 0;
+}
+main #blog .card .card-body .card-body-top{
+    padding: 16px;
+}
+main #blog .card .card-body .card-body-top .card-text{
+    color: #4E4E4E;
+    font-size: 14px;
+}
+main #blog .card .card-body .card-body-bottom{
+    background-color: #F8F8F8;
+    border-top: 1px solid #bebebe;
+    padding: 10px 16px;
+}
+main #blog .card .card-body .card-body-bottom .img-icon span{
+    font-size: 14px;
+}
+main #blog .card .card-body .card-body-bottom .img-icon a{
+    text-decoration: none;
+    color: black;
+    transition: 0.6s;
+}
+main #blog .card .card-body .card-body-bottom .img-icon a:hover{
+    color: #0078FF;
+}
+main #blog .card .card-body .card-body-bottom .img-icon a img{
+    width: 10%;
+    border-radius: 50%;
+}
+main #blog .card .card-body .card-body-bottom .time{
+    width: 50%;
+    text-align: right;
+}
+/* end Blog */
+
+/* start Contact */
+main #contact{
+    background-image: linear-gradient(#0077ffad,#0077ffad) ,url(../image/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 124px;
+    margin-top: 50px;
+}
+main #contact h3{
+    position: relative;
+    margin-bottom: 40px;
+}
+main #contact h3::after{
+    content: '';
+    width: 90px;
+    height: 3px;
+    background-color: #0078FF;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+main #contact .contact-form ul li{
+    margin: 10px 0;
+}
+main #contact .contact-form ul input{
+    font-size: 14px;
+    padding: 9px 15px;
+    border: 1px solid #bebebe;
+    border-radius: 2px;
+    outline: none;
+}
+main #contact .contact-form textarea{
+    font-size: 14px;
+    padding: 9px 15px;
+    border: 1px solid #bebebe;
+    border-radius: 2px;
+    outline: none;
+    height: 150px;
+}
+main #contact .contact-form .contact-submit{
+    background-color: #0078FF;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 24px;
+    transition: 0.5s;
+}
+main #contact .contact-form .contact-submit:hover{
+    background-color: #3593ff;
+    box-shadow: 0 0 0 4px gainsboro;
+}
+main #contact .contact-info .ul-1 li{
+    color: #4E4E4E;
+    margin: 10px 0;
+}
+main #contact .contact-info .ul-1 li span{
+    color: #0078FF;
+    margin-right: 5px;
+}
+main #contact .contact-info .ul-2{
+    margin-top: 25px;
+}
+main #contact .contact-info .ul-2 li span{
+    font-size: 18px;
+    padding: 5px;
+    border: 3px solid #0078FF;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+        transition: 0.8s;
+}
+main #contact .contact-info .ul-2 li:hover span{
+    background-color: #0078FF;
+    border-color: gainsboro;
+    color: white;
+}
+/* end Contact */
+
+    /* end main section */
+
+/* start Footer */
+footer .footer-info{
+    background-color: #0062D3;
+    font-size: 14px;
+}
+footer .footer-info a{
+    color: white;
+    text-decoration: none;
+}
+/* end Footer */
+
+
+/* animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* media quary */
+@media screen and (max-width:1199px) {
+    header .navbar .nav-item .nav-link{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:991px) {
+    header .header-caption h1{
+        font-size: 60px;
+    }
+    header .header-caption span{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:767px) {
+    header .header-caption{
+        width: 75%;
+    }
+}
+@media screen and (max-width:550px) {
+    header .header-caption h1{
+        font-size: 50px;
+    }
+    header .header-caption span{
+        font-size: 28px;
+    }
+}
