@@ -8,7 +8,7 @@ let charIndex = 0;
 let isDeleting = false;
 let sections = document.querySelectorAll("section");
 let navItems = document.querySelectorAll(".nav-item");
-let navLinks = document.querySelectorAll(".nav-link");
+let navLinks = document.querySelectorAll(".nav-link");    
 let navbarCollapse = document.querySelector(".navbar-collapse");
 
 function typeEffect() {
